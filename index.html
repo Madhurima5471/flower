@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora & Fragrance - Fresh Flowers Delivered</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">Flora & Fragrance</div>
+        <nav class="navbar">
+            <ul>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="products.html">Products</a>
+                <a href="#testimonials">Review</a>
+                <a href="#contact">Contact</a>
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <div class="fa fa-user" id="loginBtn"></div>
+            <div class="fa fa-shopping-cart" id="cart-btn"></div>
+            <div class="fa fa-bars" id="menu-btn"></div>
+        </div>
+    </header>
+
+
+    <!-- old -->
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h3>Login Now</h3>
+            <form class="login-form">
+                <input type="email" placeholder="Your Email" required>
+                <input type="password" placeholder="Your Password" required>
+                <p><a href="#" id="openSignup">Don't have an account? Sign Up</a></p>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign-Up Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close" id="closeSignupModal">&times;</span>
+            <h3>Create an Account</h3>
+            <form class="signup-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="password" placeholder="Create Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit" class="btn">Sign Up</button>
+                <p>Already have an account? <a href="#" id="backToLogin">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- new -->
+
+<!-- Login Modal -->
+<!-- <div class="modal" id="login-modal">
+    <div class="modal-content">
+      <h3>Login Now</h3>
+      <form>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="#sign-up-modal">Sign Up</a></p>
+    </div>
+  </div> -->
+  
+  <!-- Sign-Up Modal -->
+  <!-- <div class="modal" id="sign-up-modal">
+    <div class="modal-content">
+      <h3>Sign Up Now</h3>
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="#login-modal">Login</a></p>
+    </div>
+  </div> -->
+  
+
+
+
+     <!-- Hero Section -->
+     <section class="hero">
+        <!-- <h1>Fresh Flowers, Delivered Daily</h1> -->
+        <!-- <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_ROSE_AND_DIFFERNT_1.jpg" alt=""> -->
+        <!-- <h1>EcoFlora</h1> -->
+        <!-- <p>Brighten someone's day with our premium bouquets, lovingly crafted for every occasion.</p> -->
+        <!-- <button class="cta-btn">Shop Now</button> -->
+    </section>
+    <!-- <button class="cta-btn">Shop Now</button> -->
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>Why Choose Flora & Fragrance?</h2>
+        <p>At Bloom Haven, we pride ourselves on delivering fresh, high-quality flowers that bring joy and beauty to your life.</p>
+        <div class="features">
+            <div class="feature">🌸 Same-Day Delivery</div>
+            <div class="feature">💐 Custom Bouquets</div>
+            <div class="feature">🌿 Eco-Friendly Packaging</div>
+        </div>
+    </section>
+
+    
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Our Best-Selling Bouquets</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_RED_ROSE_BUNDLE_FO_1 (1).jpg" alt="Rose Bouquet">
+                <h3>Rose Delight</h3>
+                <p>$25.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_SUNFLOWER_BUNDLE_F_2.jpg" alt="Sunflower Bouquet">
+                <h3>Sunshine Charm</h3>
+                <p>$20.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_Floral_Bliss_BUND_2.jpg" alt="Mixed Bouquet">
+                <h3>Floral Bliss</h3>
+                <p>$30.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product">
+              <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_Tulip_BUNDLE_with_1.jpg" alt="Tulip">
+              <h3>Tulip</h3>
+              <p>$80.00</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+              <img src="Fairy Queen.jpg" alt="Fairy Queen">
+              <h3>Fairy Queen</h3>
+              <p>$1000.00</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+              <img src="Floral Haven.jpg" alt="Floral Haven">
+              <h3>Floral Haven</h3>
+              <p>$210.00</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="FloraTwist.jpg" alt="FloraTwist">
+            <h3>FloraTwist</h3>
+            <p>$330.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="Sunset Splendor.jpg" alt="Sunset Splendor">
+            <h3>Sunset Splendor</h3>
+            <p>$180.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-list">
+            <div class="testimonial">
+                <p>"The flowers were stunning and arrived fresh. Made my anniversary special!"</p>
+                <img src="Men1.jpg" alt="">
+                <h4>- Emily R.</h4>
+            </div>
+            <div class="testimonial">
+                <p>"I love their eco-friendly packaging and the attention to detail in every bouquet."</p>
+                <img src="Men2.jpg" alt="">
+                <h4>- James T.</h4>
+            </div>
+            <div class="testimonial">
+              <p>"I love their eco-friendly packaging and the attention to detail in every bouquet."</p>
+              <img src="Girl.jpg" alt="">
+              <h4>- James T.</h4>
+          </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Bloom Haven. All rights reserved.</p>
+    </footer>
+
+    <!-- <script src="script.js"></script> -->
+
+
+
+    <!-- Login from
+    <form action="#" class="login-form">
+        <h3>Login now</h3>
+        <input type="email" placeholder="Your email" class="text-name">
+        <input type="password" placeholder="Your password" class="text-name">
+        
+       <p>Forget Your Password <a href="#">Click Here</a></p>
+       <p>Don't Have An Account <a href="#">Create Now</a></p>
+       
+        <input type="submit"  value="Login-Now" class="btn">
+    </form> -->
+
+   
+     <!-- Your existing content -->
+    <!-- new -->
+    <!-- Login Modal -->
+    <!-- <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h3>Login Now</h3>
+            <form action="#" class="login-form">
+                <input type="email" placeholder="Your Email" required>
+                <input type="password" placeholder="Your Password" required>
+                <p><a href="#">Forgot Your Password?</a></p>
+                <button type="submit" class="btn">Login</button>
+                <p>Don't have an account? <a href="#">Sign Up</a></p>
+            </form>
+        </div>
+    </div> -->
+
+
+    <script src="script.js"></script>
+</body>
+</html>

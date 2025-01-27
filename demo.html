@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop</title>
+    <link rel="stylesheet" href="products.css">
+    <style>
+        /* Menu Button Styling */
+        .menu-btn {
+            display: none;
+            background-color: red;
+            border: 1px solid #ccc;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        /* Navbar Styling */
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin-right: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Responsive Navbar for Mobile */
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: block;
+            }
+
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                background-color: #fff;
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                padding: 10px;
+            }
+
+            .navbar ul.active {
+                display: flex;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Bloom Bliss</div>
+        <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#testimonials">Review</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="cart-btn" onclick="showCart()">Cart (<span id="cart-count">0</span>)</button>
+    </header>
+
+    <section id="products" class="products">
+        <h2>Pick Your Perfect Petals</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_RED_ROSE_BUNDLE_FO_1 (1).jpg" alt="Rose Bouquet">
+                <h3>Rose Delight</h3>
+                <p>$25.00</p>
+                <button onclick="addToCart('Rose Delight', 25, 'Leonardo_Kino_XL_i_want_to_create_a_natarul_RED_ROSE_BUNDLE_FO_1 (1).jpg')">Add to Cart</button>
+            </div>
+            <!-- Additional Products Here -->
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-footer">
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button onclick="closeCart()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+
+        // Add to cart function
+        function addToCart(name, price, image) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({ name, price, image, quantity: 1 });
+            }
+            updateCartCount();
+        }
+
+        // Update cart count
+        function updateCartCount() {
+            const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('cart-count').innerText = cartCount;
+        }
+
+        // Show cart
+        function showCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = ''; // Clear previous items
+            let total = 0;
+
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+                cartItemsContainer.innerHTML += `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div>
+                            <h4>${item.name}</h4>
+                            <p>$${item.price} x ${item.quantity}</p>
+                        </div>
+                        <button onclick="removeFromCart('${item.name}')">Remove</button>
+                    </div>
+                `;
+            });
+
+            document.getElementById('cart-total').innerText = total.toFixed(2);
+            document.getElementById('cart-modal').classList.add('active');
+        }
+
+        // Close cart
+        function closeCart() {
+            document.getElementById('cart-modal').classList.remove('active');
+        }
+
+        // Remove item from cart
+        function removeFromCart(name) {
+            cart = cart.filter(item => item.name !== name);
+            updateCartCount();
+            showCart();
+        }
+
+        // Toggle menu visibility
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar ul');
+            navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

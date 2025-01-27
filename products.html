@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Bloom Bliss</div>
+        <!-- extra -->
+        <!-- <button class="menu-btn" onclick="toggleMenu()">Menu</button> -->
+        <!-- extra -->
+         <!-- part-3 plus part-2 -->
+         <!-- <button class="menu-btn">Menu</button> -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#testimonials">Review</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button class="cart-btn" onclick="showCart()">Cart (<span id="cart-count">0</span>)</button>
+
+    </header>
+
+    <section id="products" class="products">
+        <h2>Pick Your Perfect Petals</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_RED_ROSE_BUNDLE_FO_1 (1).jpg" alt="Rose Bouquet">
+                <h3>Rose Delight</h3>
+                <p>$25.00</p>
+                <button onclick="addToCart('Rose Delight', 25, 'Leonardo_Kino_XL_i_want_to_create_a_natarul_RED_ROSE_BUNDLE_FO_1 (1).jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_SUNFLOWER_BUNDLE_F_2.jpg" alt="Sunflower Bouquet">
+                <h3>Sunshine Charm</h3>
+                <p>$20.00</p>
+                <button onclick="addToCart('Sunshine Charm', 20, 'Leonardo_Kino_XL_i_want_to_create_a_natarul_SUNFLOWER_BUNDLE_F_2.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_Floral_Bliss_BUND_2.jpg" alt="Mixed Bouquet">
+                <h3>Floral Bliss</h3>
+                <p>$30.00</p>
+                <button onclick="addToCart('Floral Bliss', 30, 'Leonardo_Kino_XL_i_want_to_create_a_natarul_Floral_Bliss_BUND_2.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_Orchid_BUNDLE_FOR_2.jpg" alt="Orchid">
+                <h3>Orchid</h3>
+                <p>$40.00</p>
+                <button onclick="addToCart('Orchid', 40, 'Leonardo_Kino_XL_i_want_to_create_a_natarul_Orchid_BUNDLE_FOR_2.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_Tulip_BUNDLE_with_1.jpg" alt="Tulip">
+                <h3>Tulip</h3>
+                <p>$80.00</p>
+                <button onclick="addToCart('Tulip', 80, 'Leonardo_Kino_XL_i_want_to_create_a_natarul_Tulip_BUNDLE_with_1.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_Marigold_BUNDLE_wi_2.jpg" alt="Marigold">
+                <h3>Marigold</h3>
+                <p>$10.00</p>
+                <button onclick="addToCart('Marigold', 10, 'Leonardo_Kino_XL_i_want_to_create_a_natarul_Marigold_BUNDLE_wi_2.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_Lavender_BUNDLE_wi_2.jpg" alt="Lavender">
+                <h3>Lavender</h3>
+                <p>$100.00</p>
+                <button onclick="addToCart('Lavender', 100, 'Leonardo_Kino_XL_i_want_to_create_a_natarul_Lavender_BUNDLE_wi_2.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_Lily_BUNDLE_with_g_3.jpg" alt="Lily">
+                <h3>Lily</h3>
+                <p>$130.00</p>
+                 <button onclick="addToCart('Lily', 130, 'Leonardo_Kino_XL_i_want_to_create_a_natarul_Lily_BUNDLE_with_g_3.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_Gladiolus_BUNDLE_w_3.jpg" alt="Gladiolus">
+                <h3>Gladiolus</h3>
+                <p>$103.00</p>
+                <button onclick="addToCart('Gladiolus', 103, 'Leonardo_Kino_XL_i_want_to_create_a_natarul_Gladiolus_BUNDLE_w_3.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_Carnation_BUNDLE_w_3.jpg" alt="Carnation">
+                <h3>Carnation</h3>
+                <p>$200.00</p>
+                 <button onclick="addToCart('Carnation', 200, 'Leonardo_Kino_XL_i_want_to_create_a_natarul_Carnation_BUNDLE_w_3.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_sunflowerlily_and_3.jpg" alt="Harvest Blooms">
+                <h3>Harvest Blooms</h3>
+                <p>$150.00</p>
+                <button onclick="addToCart('Harvest Blooms', 150, 'Leonardo_Kino_XL_i_want_to_create_a_natarul_sunflowerlily_and_3')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Leonardo_Kino_XL_i_want_to_create_a_natarul_Peony_Rose_Hydran_0.jpg" alt="Snowflake Flowers">
+                <h3>Snowflake</h3>
+                <p>$300.00</p>
+                <button onclick="addToCart('Snowflake', 300, 'Leonardo_Kino_XL_i_want_to_create_a_natarul_Peony_Rose_Hydran_0.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Pearl Petals.jpg" alt="Pearl Petals">
+                <h3>Pearl Petals</h3>
+                <p>$500.00</p>
+                 <button onclick="addToCart('Pearl Petals', 500, 'Pearl Petals.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Royal Petals.jpg" alt="Royal Petals">
+                <h3>Royal Petals</h3>
+                <p>$203.00</p>
+                <button onclick="addToCart('Royal Petals', 203, 'Royal Petals.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Fairy Queen.jpg" alt="Fairy Queen">
+                <h3>Fairy Queen</h3>
+                <p>$1000.00</p>
+                 <button onclick="addToCart('Fairy Queen', 1000, 'Fairy Queen.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Sunset Splendor.jpg" alt="Sunset Splendor">
+                <h3>Sunset Splendor</h3>
+                <p>$180.00</p>
+                <button onclick="addToCart('Sunset Splendor', 180, 'Sunset Splendor.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Floral Haven.jpg" alt="Floral Haven">
+                <h3>Floral Haven</h3>
+                <p>$210.00</p>
+                <button onclick="addToCart('Floral Haven', 210, 'Floral Haven.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="FloraTwist.jpg" alt="FloraTwist">
+                <h3>FloraTwist</h3>
+                <p>$330.00</p>
+                 <button onclick="addToCart('FloraTwist', 330, 'FloraTwist.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="PetalFusion.jpg" alt="PetalFusion">
+                <h3>PetalFusion</h3>
+                <p>$380.00</p>
+                <button onclick="addToCart('PetalFusion', 380, 'PetalFusion.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Scarlet Serenade.jpg" alt="Scarlet Serenade">
+                <h3>Scarlet Serenade</h3>
+                <p>$400.00</p>
+                 <button onclick="addToCart('Scarlet Serenade', 400, 'Scarlet Serenade.jpg')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+   <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-footer">
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button onclick="closeCart()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+
+        // Add to cart function
+        function addToCart(name, price, image) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({ name, price, image, quantity: 1 });
+            }
+            updateCartCount();
+        }
+
+        // Update cart count
+        function updateCartCount() {
+            const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('cart-count').innerText = cartCount;
+        }
+
+        // Show cart
+        function showCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = ''; // Clear previous items
+            let total = 0;
+
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+                cartItemsContainer.innerHTML += `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div>
+                            <h4>${item.name}</h4>
+                            <p>$${item.price} x ${item.quantity}</p>
+                        </div>
+                        <button onclick="removeFromCart('${item.name}')">Remove</button>
+                    </div>
+                `;
+            });
+
+            document.getElementById('cart-total').innerText = total.toFixed(2);
+            document.getElementById('cart-modal').classList.add('active');
+        }
+
+        // Close cart
+        function closeCart() {
+            document.getElementById('cart-modal').classList.remove('active');
+        }
+
+        // Remove item from cart
+        function removeFromCart(name) {
+            cart = cart.filter(item => item.name !== name);
+            updateCartCount();
+            showCart();
+        }
+
+
+        //  extra(part-1)
+         // Toggle menu visibility
+        //  function toggleMenu() {
+        //     const navbar = document.querySelector('.navbar ul');
+        //     navbar.classList.toggle('active');
+        // }
+        //extra(part-1)
+
+        // part-2
+        // function toggleMenu() {
+        //     const navbar = document.querySelector('.navbar ul');
+        //     navbar.classList.toggle('active');
+        // }
+
+        // part-3 plus part-2
+        // JavaScript for toggling the menu
+//         document.addEventListener('DOMContentLoaded', () => {
+//         const menuBtn = document.querySelector('.menu-btn');
+//         const navbarMenu = document.querySelector('.navbar ul');
+
+//         menuBtn.addEventListener('click', () => {
+//         navbarMenu.classList.toggle('active');
+//   });
+// });
+
+
+
+
+    </script>
+
+    
+
+
+    
+</body>
+
+</html>
